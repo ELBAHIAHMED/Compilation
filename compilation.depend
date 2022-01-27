@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1643237829 source:c:\users\el bahi\desktop\compilation\src\header.h.cpp
+
+1643239153 source:c:\users\el bahi\desktop\compilation\main.c
+	"dependencies.h"
+	"lex.c"
+
+1643238850 c:\users\el bahi\desktop\compilation\dependencies.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<stdbool.h>
+
+1643239264 c:\users\el bahi\desktop\compilation\lex.c
+	"dependencies.h"
+	"lex.h"
+
+1643237767 c:\users\el bahi\desktop\compilation\lex.h
+
