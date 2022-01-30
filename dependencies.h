@@ -34,22 +34,36 @@
             exit(1);\
         }
 
-    FILE *prog_file, *out_file; //*xml_file;
+    FILE *prog_file, *out_file , *xml_file;
     char **Strings;
     int nbr_tokens, nbr_strs, nbr_IDs;
 
     typedef enum {
         // keywords tokens
-        BEGINPROG , CLOSEPROG , VAR, BEGINFUN ,CLOSEFUNC,RETURN,PRINCIPALFUNC,
+        BEGINPROG , CLOSEPROG , VAR, TYPE ,BEGINFUNC ,CLOSEFUNC,RETURN,PRINCIPALFUNC,
         IF,CLOSEIF,ELIF,ELSE, WHILE, READ, SHOW, AND, OR, NOT, SHOWLN, READLN,DO,CLOSEWHILE,
-        INTEGER , BOOL , FLOAT, STRING, LONG , CHARACTER, DATE , TIME,
         FOR , CLOSEFOR , TRUE, FALSE, STOP, SKIP, ATTACH, VOID, _NULL,
+        INTEGER , BOOL , FLOAT, STRING, LONG , CHARACTER, DATE , TIME,
         SC,  PT,  PLUS,  MINUS,  MULT,  DIV,  COMMA,  EQ,  ASSIGN,  INF,  INFEQ,  SUP,
         SUPEQ, DIFF, OP, CP, OSB, CSB, CL, OCB, CCB,
         // Other tokens
-        ID, NUM, STRVAL, CHARVAL , EndOfFile
+        ID, NUM, STRVAL, CHARVAL , EndOfFile,
+        
     } token_code;
-
+/*typedef enum {
+        // keywords tokens
+        CONST,  IF,  ELSE, DEF, TYPE, RUN, RETURN, WHILE,
+        READ,  WRITE, AND, OR, NOT, WRITELN, READLN,
+        INTEGER , BOOL , FLOAT, STRING, LONG , CHAR, DATE, TIME,
+        FOR, TRUE, FALSE, STOP, SKIP, ATTACH, VOID, _NULL,
+        // Symbols tokens
+        SC,  PT,  PLUS,  MINUS,  MULT,  DIV,  COMMA,  EQ,  ASSIGN,  INF,  INFEQ,  SUP,
+        SUPEQ, DIFF, OP, CP, OSB, CSB, CL, OCB, CCB,
+        // Other tokens
+        ID, NUM, STRVAL, CHARVAL, EndOfFile
+    } token_code;
+ 
+*/
     typedef struct {
         token_code code;
         char name[lenName];

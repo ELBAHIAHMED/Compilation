@@ -149,11 +149,34 @@ bool isWord(){
     // Verify this word match a keyword in the list of keywords
     while( (cmp = strcmp(word , keywords_list[j++])) != 0 && j < NBRKEYWORDS );
 
-    if(cmp == 0){ // is keyword
+    if(cmp == 0){
+        // is keyword
+        int a=strcmp(word,"INTEGER");
+        int b=strcmp(word,"BOOL" );
+        int c=strcmp(word,"FLOAT");
+        int d=strcmp(word,"STRING");
+        int e=strcmp(word,"LONG");
+        int f=strcmp(word,"CHARACTER");
+        int g=strcmp(word,"DATE");
+        int h=strcmp(word,"TIME");
+        if ( a==0|| b==0|| c == 0|| d==0 || e==0 || f==0 || g==0 || h==0 )
+        {
+        curr_token.code = TYPE;
+        strcpy(curr_token.name, "TYPE");
+        strcpy(curr_token.value, word);
+        }
+        else{
         curr_token.code = j-1;
         strcpy(curr_token.name, keywords_list[j-1]);
-        strcpy(curr_token.value, word);
+        strcpy(curr_token.value, word);}
     }
+
+
+    /*else if (cmt==0) { // If not keyword, so it's an TYPE
+        curr_token.code = TYPE;
+        strcpy(curr_token.name, "TYPE");
+        strcpy(curr_token.value, word);
+    }*/
 
     else{ // If not keyword, so it's an ID
         curr_token.code = ID;
@@ -177,8 +200,8 @@ bool isChar(){
     memset(ch,'\0', sizeof(ch));
     ch[0] = next_char();
 
-    curr_token.code = CHARVAL;
-    strcpy(curr_token.name, "CHARVAL");
+    curr_token.code = CHARACTER;
+    strcpy(curr_token.name, "CHARACTER");
     strcpy(curr_token.value, ch);
     curr_token.line = curr_line;
 
@@ -236,7 +259,7 @@ bool isSpecial(){
     op[0] = curr_char;
     if( ( (op[1] = curr_char = next_char()) != '=') && ( (op[1] != '-') ))
         op[1] =  '\0';
-    
+
     else
         next_char();
 

@@ -10,7 +10,7 @@
     int curr_line, curr_column;
 
     const char* keywords_list[] =
-        {"BEGINPROG" , "CLOSEPROG", "VAR", "BEGINFUN","CLOSEFUNC","RETURN","PRINCIPALFUNC",
+        {"BEGINPROG" , "CLOSEPROG", "VAR","TYPE" ,"BEGINFUNC","CLOSEFUNC","RETURN","PRINCIPALFUNC",
         "IF","CLOSEIF","ELIF","ELSE",
         "WHILE", "READ", "SHOW", "AND", "OR", "NOT", "SHOWLN", "READLN","DO","CLOSEWHILE",
         "INTEGER" , "BOOL" , "FLOAT", "STRING", "LONG" , "CHARACTER", "DATE", "TIME",

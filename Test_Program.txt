@@ -1,4 +1,5 @@
-begin_prog
+
+beginprog
 	var(integer a<-1 ,b<-2;
                float c,d;
  			   bit e<-0, f<-1;);
