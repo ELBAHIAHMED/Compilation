@@ -62,6 +62,7 @@ LETTER      =	"A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | 
     void SyntaxError(token_code, char*);
     void Program();
     void VARS() ;
+    void START();
     bool Consts();
     void NewTypes(); // definition of new types
     bool isType(); // primitive types
@@ -88,5 +89,21 @@ LETTER      =	"A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | 
     bool MulOp();
     bool Factor();
     bool isBool();
+    void CHOICE();
+    void VARS();
+    void INSTS();
+    void INST();
+    void AFFEC();
+    void EXPR();
+    void TERM();
+    void FACT();
+    void SI();
+    void COND();
+    void TANTQUE();
+    void LIRE();
+    void ECRIRE();
+    void FUNCTION();
+    
+    void SWITCH();
 
 #endif // SYNTAX_ANALYZER_H_INCLUDED

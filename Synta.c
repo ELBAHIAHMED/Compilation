@@ -2,60 +2,57 @@
 #include "Synta.h"
 
 // Syntax Analysis: Parsing
-void Erreur(token_code COD_ERR,int i){int ligne=5;
+void Erreur(token_code COD_ERR,int i){
     switch(COD_ERR){
         
-  case 0: printf("%d-ligne %d ERREUR-->STARTP_ERREUR\n",i,curr_token.line);break;
-  case 1: printf("%d-ligne %d ERREUR-->ID_ERREUR\n",i,curr_token.line);break;
-  case 2: printf("%d-ligne %d ERREUR-->VAR_ERREUR\n",i,curr_token.line);break;
-  case 3: printf("%d-ligne %d ERREUR-->START_ERREUR\n",i,curr_token.line);break;
-  case 4: printf("%d-ligne %d ERREUR-->END_ERREUR\n",i,curr_token.line);break;
-  case 5: printf("%d-ligne %d ERREUR-->IF_ERREUR\n",i,curr_token.line);break;
-  case 6: printf("%d-ligne %d ERREUR-->THEN_ERREUR\n",i,ligne);break;
-  case 7: printf("%d-ligne %d ERREUR-->WHILE_ERREUR\n",i,ligne);break;
-  case 8: printf("%d-ligne %d ERREUR-->FUNCTION_ERREUR\n",i,ligne);break;
-  case 9: printf("%d-ligne %d ERREUR-->PUT_ERREUR\n",i,ligne);break;
-  case 10: printf("%d-ligne %d ERREUR-->PRINT_ERREUR\n",i,ligne);break;
-  case 11: printf("%d-ligne %d ERREUR-->PV_ERREUR\n",i,ligne);break;
-  case 12: printf("%d-ligne %d ERREUR-->PLUS_ERREUR\n",i,ligne);break;
-  case 13: printf("%d-ligne %d ERREUR-->MOINS_ERREUR\n",i,ligne);break;
-  case 14: printf("%d-ligne %d ERREUR-->MULT_ERREUR\n",i,ligne);break;
-  case 15: printf("%d-ligne %d ERREUR-->DIV_ERREUR\n",i,ligne);break;
-  case 16: printf("%d-ligne %d ERREUR-->VIR_ERREUR\n",i,ligne);break;
-  case 17: printf("%d-ligne %d ERREUR-->AFF_ERREUR\n",i,ligne);break;
-  case 18: printf("%d-ligne %d ERREUR-->INF_ERREUR\n",i,ligne);break;
-  case 19: printf("%d-ligne %d ERREUR-->INFEG_ERREUR\n",i,ligne);break;
-  case 20: printf("%d-ligne %d ERREUR-->SUP_ERREUR\n",i,ligne);break;
-  case 21: printf("%d-ligne %d ERREUR-->SUPEG_ERREUR\n",i,ligne);break;
-  case 22: printf("%d-ligne %d ERREUR-->DIFF_ERREUR\n",i,ligne);break;
-  case 23: printf("%d-ligne %d ERREUR-->PO_ERREUR\n",i,ligne);break;
-  case 24: printf("%d-ligne %d ERREUR-->PF_ERREUR\n",i,ligne);break;
-  case 25: printf("%d-ligne %d ERREUR-->ENDPROG_ERREUR\n",i,ligne);break;
-  case 26: printf("%d-ligne %d ERREUR-->NUM_ERREUR\n",i,ligne);break;
-  case 27: printf("%d-ligne %d ERREUR-->EG_ERREUR\n",i,ligne);break;
-  case 28: printf("%d-ligne %d ERREUR-->EOF_ERREUR\n",i,ligne);break;
-  case 29: printf("%d-ligne %d ERREUR-->SWITCH_ERREUR\n",i,ligne);break;
-  case 30: printf("%d-ligne %d ERREUR-->CASE_ERREUR\n",i,ligne);break;
-  case 31: printf("%d-ligne %d ERREUR-->BREAK_ERREUR\n",i,ligne);break;
-  case 32: printf("%d-ligne %d ERREUR-->DEFFAULT_ERREUR\n",i,ligne);break;
-  case 33: printf("%d-ligne %d ERREUR-->FOR_ERREUR\n",i,ligne);break;
-  case 34: printf("%d-ligne %d ERREUR-->MAIN_ERREUR\n",i,ligne);break;
-  case 35: printf("%d-ligne %d ERREUR-->RETURN_ERREUR\n",i,ligne);break;
-  case 36: printf("%d-ligne %d ERREUR-->ELSE_ERREUR\n",i,ligne);break;
-  case 37: printf("%d-ligne %d ERREUR-->ELSIF_ERREUR\n",i,ligne);break;
-  case 38: printf("%d-ligne %d ERREUR-->AND_ERREUR\n",i,ligne);break;
-  case 39: printf("%d-ligne %d ERREUR-->TYPE_ERREUR\n",i,ligne);break;
-  case 40: printf("%d-ligne %d ERREUR-->DOUBLEPOINT_ERREUR\n",i,ligne);break;
-  case 41: printf("%d-ligne %d ERREUR-->CHAINE_ERREUR\n",i,ligne);break;
-  case 42: printf("%d-ligne %d ERREUR-->CONDITION_ERREUR\n",i,ligne);break;
-  case 43 : printf("%d-ligne %d ERREUR-->OPERATION_ERREUR\n",i,ligne);break;
+  case 0: printf("%d-ligne %s ERREUR-->BEGINPROG_ERREUR\n",i,curr_token.value) ;break;
+  case 60: printf("%d-ligne %s ERREUR-->ID_ERREUR\n",i,curr_token.value);break;
+  case 2: printf("%d-ligne %s ERREUR-->VAR_ERREUR\n",i,curr_token.value);break;
+  case 4: printf("%d-ligne %s ERREUR-->BEGINFUNC_ERREUR\n",i,curr_token.value);break; 
+  case 1: printf("%d-ligne %s ERREUR-->CLOSEPROG_ERREUR\n",i,curr_token.value);break; 
+  case 5: printf("%d-ligne %s ERREUR-->CLOSEFUNC_ERREUR\n",i,curr_token.value);break;
+  case 9: printf("%d-ligne %s ERREUR-->CLOSEIF_ERREUR\n",i,curr_token.value);break;
+  case 21: printf("%d-ligne %s ERREUR-->CLOSEWHILE_ERREUR\n",i,curr_token.value);break;
+  case 23: printf("%d-ligne %s ERREUR-->CLOSEFOR_ERREUR\n",i,curr_token.value);break;
+  case 8: printf("%d-ligne %s ERREUR-->IF_ERREUR\n",i,curr_token.value);break; 
+  case 12 : printf("%d-ligne %s ERREUR-->WHILE_ERREUR\n",i,curr_token.value);break;
+  case 13: printf("%d-ligne %s ERREUR-->READ_ERREUR\n",i,curr_token.value);break; 
+  case 14: printf("%d-ligne %s ERREUR-->SHOW_ERREUR\n",i,curr_token.value);break;
+  case 39: printf("%d-ligne %s ERREUR-->SC_ERREUR\n",i,curr_token.value);break; 
+  case 41: printf("%d-ligne %s ERREUR-->PLUS_ERREUR\n",i,curr_token.value);break;
+  case 42: printf("%d-ligne %s ERREUR-->MOINS_ERREUR\n",i,curr_token.value);break;
+  case 43: printf("%d-ligne %s ERREUR-->MULT_ERREUR\n",i,curr_token.value);break;
+  case 44: printf("%d-ligne %s ERREUR-->DIV_ERREUR\n",i,curr_token.value);break;
+  case 45: printf("%d-ligne %s ERREUR-->VIR_ERREUR\n",i,curr_token.value);break;
+  case 47: printf("%d-ligne %s ERREUR-->AFF_ERREUR\n",i,curr_token.value);break;
+  case 48: printf("%d-ligne %s ERREUR-->INF_ERREUR\n",i,curr_token.value);break;
+  case 49: printf("%d-ligne %s ERREUR-->INFEG_ERREUR\n",i,curr_token.value);break;
+  case 50: printf("%d-ligne %s ERREUR-->SUP_ERREUR\n",i,curr_token.value);break;
+  case 51: printf("%d-ligne %s ERREUR-->SUPEG_ERREUR\n",i,curr_token.value);break;
+  case 52: printf("%d-ligne %s ERREUR-->DIFF_ERREUR\n",i,curr_token.value);break;
+  case 53: printf("%d-ligne %s ERREUR-->PO_ERREUR\n",i,curr_token.value);break;
+  case 54: printf("%d-ligne %s ERREUR-->PF_ERREUR\n",i,curr_token.value);break;
+  case 61: printf("%d-ligne %s ERREUR-->NUM_ERREUR\n",i,curr_token.value);break;
+  case 46: printf("%d-ligne %s ERREUR-->EG_ERREUR\n",i,curr_token.value);break;
+  case 64: printf("%d-ligne %s ERREUR-->EndofFile_ERREUR\n",i,curr_token.value);break; 
+  case 22: printf("%d-ligne %s ERREUR-->FOR_ERREUR\n",i,curr_token.value);break;
+  case 7: printf("%d-ligne %s ERREUR-->MAIN_ERREUR\n",i,curr_token.value);break;
+  case 6: printf("%d-ligne %s ERREUR-->RETURN_ERREUR\n",i,curr_token.value);break;
+  case 11: printf("%d-ligne %s ERREUR-->ELSE_ERREUR\n",i,curr_token.value);break;
+  case 10: printf("%d-ligne %s ERREUR-->ELSIF_ERREUR\n",i,curr_token.value);break;
+  case 15: printf("%d-ligne %s ERREUR-->AND_ERREUR\n",i,curr_token.value);break;
+  case 3: printf("%d-ligne %s ERREUR-->TYPE_ERREUR\n",i,curr_token.value);exit(0);break;
+  case 57: printf("%d-ligne %s ERREUR-->DOUBLEPOINT_ERREUR\n",i,curr_token.value);exit(0);break; 
+  case 63: printf("%d-ligne %s ERREUR-->CHAINE_ERREUR\n",i,curr_token.value);exit(0);break; 
     default : printf("probleme %d \n , %s \n", curr_token.code, curr_token.value);
+    
   }
   }
  bool verifyTokenbeging(token_code code_to_test){
     if ( (curr_token = next_token()).code != code_to_test ){
        previous_token();
        Erreur(code_to_test,curr_token.line);
+       
         return false;
     }
     next_token();
@@ -66,7 +63,7 @@ void Erreur(token_code COD_ERR,int i){int ligne=5;
 bool verifyToken(token_code code_to_test){
     if ( curr_token.code != code_to_test ){
        previous_token();
-       Erreur(code_to_test,curr_token.line);
+       Erreur(code_to_test,curr_token.line);exit(0);
         return false;
     }
     next_token();
@@ -163,7 +160,7 @@ void Program(){
                                           next_token();
                                           verifyToken(NUM);
                                           while (curr_token.code== COMMA) {
-                                                          next_token();
+                                                          verifyToken(COMMA);
                                                           verifyToken(ID);
                                                           if(curr_token.code ==ASSIGN){
                                                               verifyToken(ASSIGN);
@@ -184,63 +181,272 @@ void Program(){
                                                         }
                                                       }
                            verifyToken(SC);
+                           }
                            
                            
-                       }verifyToken(CP);
+                       verifyToken(CP);
                        verifyToken(SC);break;
                        }
       case BEGINFUNC : break;
       //default          : Erreur(BEGINFUN,curr_token.line);break;
     }
-    next_token();
+    
   }
 
   }
 
-  /*void START(){
+  void START(){
     while (curr_token.code==BEGINFUNC){
      switch (curr_token.code) {
        case BEGINFUNC: verifyToken(BEGINFUNC);
                          verifyToken(TYPE);
                          switch(curr_token.code){
-                           case FUNCTION_TOKEN : Test_Symbole(FUNCTION_TOKEN,FUNCTION_ERR);
-                                                 Test_Symbole(ID_TOKEN,ID_ERR);
-                                                 Test_Symbole(PO_TOKEN,PO_ERR);
-                                                 if(temp->cls==TYPE_TOKEN){
-                                                            Test_Symbole(TYPE_TOKEN,TYPE_ERR);
-                                                            Test_Symbole(ID_TOKEN,ID_ERR);
-                                                            while(temp->cls==VIR_TOKEN){
-                                                                    Sym_Suiv();
-                                                                    Test_Symbole(TYPE_TOKEN,TYPE_ERR);
-                                                                    Test_Symbole(ID_TOKEN,ID_ERR);
+                           case ID : verifyToken(ID);
+                                                 verifyToken(OP);
+                                                 if(curr_token.code=TYPE){
+                                                            verifyToken(TYPE);
+                                                            verifyToken(ID);
+                                                            while(curr_token.code==COMMA){
+                                                                    next_token();
+                                                                    verifyToken(TYPE);
+                                                                    verifyToken(ID);
                                                                   }
                                                             }
-                                                 Test_Symbole(PF_TOKEN,PF_ERR);
-                                                 while(temp->cls==SAUT_TOKEN)
-                                                 {ligne+=1;
-                                                 Sym_Suiv();}
+                                                 verifyToken(CP);
+                                                 
                                                  INSTS();
-                                                 Test_Symbole(END_TOKEN,END_ERR);
-                                                 Test_Symbole(FUNCTION_TOKEN,FUNCTION_ERR);
-                                                 Test_Symbole(ID_TOKEN,ID_ERR);break;
-                           case MAIN_TOKEN     : Test_Symbole(MAIN_TOKEN,MAIN_ERR);
-                                                 Test_Symbole(PO_TOKEN,PO_ERR);
-                                                 Test_Symbole(PF_TOKEN,PF_ERR);
-                                                 while(temp->cls==SAUT_TOKEN)
-                                                 {ligne+=1;
-                                                 Sym_Suiv();}
+                                                 verifyToken(CLOSEFUNC);
+                                                 
+                                                 verifyToken(ID);
+                                                 verifyToken(SC);
+                           case PRINCIPALFUNC    : verifyToken(PRINCIPALFUNC);
+                                                 verifyToken(OP);
+                                                 verifyToken(CP);
+                                                
                                                  INSTS();
-                                                 Test_Symbole(END_TOKEN,END_ERR);
-                                                 Test_Symbole(MAIN_TOKEN,MAIN_ERR);break;
-                           default             : Erreur(FUNCTION_ERR,i);break;
-                         }break;
-       default : Erreur(START_ERR,i);break;
+                                                 verifyToken(CLOSEFUNC);
+                                                 verifyToken(PRINCIPALFUNC);break;
+                           default             : Erreur(BEGINFUNC,curr_token.line);break; // printf();
+                         }
+       default : printf("----FUNCTION ----");break; // errreur (curr_toke.code) id ahmed id
      }
-     while(temp->cls==SAUT_TOKEN)
-     {ligne+=1;
-     Sym_Suiv();}
+    
   }
+
 }
+
+/* verification des instruction */
+  void INSTS() {
+    INST();
+    while (curr_token.code!=EndOfFile)
+    INST();
+}
+/* verification des BEGIN, WHILE, WRITE, READ .....*/
+  void INST() {
+    
+    switch (curr_token.code) {
+      case BEGINFUNC :verifyToken(BEGINFUNC);FUNCTION();verifyToken(SC); verifyToken(CLOSEFUNC);
+                            break;
+      //case SWITCH_TOKEN : SWITCH();break;
+      case FOR    : For(); break;
+      case ID     : verifyToken(ID);
+                          if (curr_token.code==SC) verifyToken(SC);
+                          else  AFFEC();
+                          next_token(); // verifier affec
+                          break;
+      case IF   : SI(); break;
+      case WHILE : TANTQUE();break;
+      case SHOW : ECRIRE();verifyToken(SC);
+                         break;
+      case READ  : LIRE();verifyToken(SC); break;
+      case RETURN: verifyToken(RETURN);
+                         EXPR();
+                         verifyToken(SC);
+                         break;
+      
+      default          : next_token();break;
+  }
+  }
+/* verification des AFFEC_TOKEN (affectation) */
+  void AFFEC() {
+    verifyToken(ASSIGN);
+    EXPR();
+    verifyToken(SC);
+  }
+/* verification des expresions + ou - */
+  void EXPR() {
+    TERM();
+    while(curr_token.code== PLUS || curr_token.code== MINUS) {
+      next_token();
+      TERM();
+    }
+  }
+/* verification des termes */
+  void TERM() {
+
+    FACT();
+      /* verification des expresions multiplication ou division */
+    while(curr_token.code== MULT || curr_token.code == DIV) {
+     next_token();
+      FACT();
+    }
+  }
+/* verification des facteurs */
+  void FACT() {
+
+      switch(curr_token.code) {
+      case ID : verifyToken(ID);
+                      if(curr_token.code==OP)
+                      FUNCTION(); break ;
+      case OP : next_token();EXPR(); verifyToken(CP); break ;
+      case NUM : verifyToken(NUM);break;
+      default      : Erreur(curr_token.code,curr_token.line); break ;
+    }
+  }
+/* verification fonction */
+  void FUNCTION() {
+    verifyToken(OP);
+    if (curr_token.code!=CP)
+     EXPR();
+    while(curr_token.code==COMMA){
+                                next_token();
+                                EXPR();
+                              }
+    verifyToken(CP);
+  }
+/* verification FOR */
+void For(){
+  verifyToken(FOR);
+  verifyToken(OP);
+  verifyToken(ID);
+  verifyToken(ASSIGN);
+  FACT();
+ verifyToken(SC);
+  COND();
+  verifyToken(SC);
+  verifyToken(ID);
+  verifyToken(ASSIGN);
+  EXPR();
+  verifyToken(CP);
+  INSTS();
+  verifyToken(CLOSEFOR);
+  
+}
+/* verification SWITCH */
+/*void SWITCH(){
+  verifyToken()
+  Test_Symbole(PO_TOKEN,PO_ERR);
+  Test_Symbole(ID_TOKEN,ID_ERR);
+  Test_Symbole(PF_TOKEN,PF_ERR);
+  while(temp->cls==SAUT_TOKEN)
+       {ligne+=1;
+       Sym_Suiv();}
+  if (temp->cls!=CASE_TOKEN)
+    Erreur(CASE_ERR,i);
+  while (temp->cls==CASE_TOKEN) {
+                                  Test_Symbole(CASE_TOKEN,CASE_ERR);
+                                  FACT();
+                                  Test_Symbole(PP_TOKEN,PP_ERR);
+                                  while(temp->cls!=BREAK_TOKEN)
+                                    INST();
+                                  Test_Symbole(BREAK_TOKEN,BREAK_ERR);
+                                  Test_Symbole(PV_TOKEN,PV_ERR);
+                                  while(temp->cls==SAUT_TOKEN){
+                                    ligne+=1;
+                                    Sym_Suiv();}
+                                }
+  if(temp->cls==DEFAULT_TOKEN){
+                                  Test_Symbole(DEFAULT_TOKEN,DEFAULT_ERR);
+                                  Test_Symbole(PP_TOKEN,PP_ERR);
+                                  while(temp->cls!=BREAK_TOKEN)
+                                  INST();
+                                  Test_Symbole(BREAK_TOKEN,BREAK_ERR);
+                                  Test_Symbole(PV_TOKEN,PV_ERR);
+                                  while(temp->cls==SAUT_TOKEN)
+                                       {ligne+=1;
+                                       Sym_Suiv();}
+                                }
+  Test_Symbole(END_TOKEN,END_ERR);
+  Test_Symbole(SWITCH_TOKEN,SWITCH_ERR);
+}*/
+/* verification de IF_TOKEN */
+  void SI() {
+
+    verifyToken(IF);
+    COND();// next token
+    next_token();
+    INST();
+    CHOICE();
+    verifyToken(CLOSEIF);
+  }
+  void CHOICE(){
+    switch (curr_token.code) {
+                    case ELIF: verifyToken(ELIF);
+                                      COND(); // next token 
+                                      next_token();
+                                      
+                                      INST();break;
+                    case ELSE: verifyToken(ELSE);
+                                     
+                                     
+                                     INST();break;
+                    default : break;
+                  }
+
+  }
+/* verification de la condition apres IF */
+  void COND() {
+
+    EXPR();
+    switch(curr_token.code) {
+      case EQ:next_token();EXPR();break;
+      case DIFF:next_token();EXPR();break;
+      case INF:next_token();EXPR();break;
+      case SUP:next_token();EXPR();break;
+      case INFEQ:next_token();EXPR();break;
+      case SUPEQ:next_token();EXPR();break;
+      default: printf ("----CONDITION ERREUR----"); /*Erreur(COND_ERR,i);*/break;
+    }
+  }
+/* verification de ce qui est après le  WHILE */
+  void TANTQUE() {
+    verifyToken(WHILE);
+    COND();
+    next_token();
+    
+    INST();
+    verifyToken(CLOSEWHILE);
+
+}
+/* verification de ce qui est après le  PRINT_out */
+  void ECRIRE(){
+     verifyToken(SHOW);
+      verifyToken(OP);
+      /*while(curr_token.code!=CP)
+        { switch (curr_token.code) {
+              case CHAINE_TOKEN: Test_Symbole(CHAINE_TOKEN,CHAINE_ERR);break;
+              case ID: EXPR();break;
+              case NUM: EXPR();break;
+              case COMMA: verifyToken(COMMA);break;
+              default:break;
+            }
+        } 
+      Test_Symbole(PF_TOKEN,PF_ERR);*/
+        EXPR();
+        verifyToken(CP);
+        verifyToken(SC);
+
+    }
+/* verification de ce qui est après le  PUT_in */
+  void LIRE() {
+
+    verifyToken(READ);
+    verifyToken(OP);
+    EXPR();
+    verifyToken(CP);
+    verifyToken(SC);
+  }
+
 /*
 // CONST	=	�const� ,  ID  ,  �=� ,  ( NUM | STRVAL | CHARVAL | BOOLVAL ) , �;� ;
 bool Consts(){

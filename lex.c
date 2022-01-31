@@ -18,7 +18,7 @@ void lexicalAnalysis(){
 }
 
 void WriteCurrTknToFile(){
-    fprintf(out_file,"CODE: %d     %s_TOKEN     VALUE: %s      line: %d>\n",
+    fprintf(out_file,"CODE: %d     %s_TOKEN     VALUE: %s      n° line: %d \n",
             curr_token.code, curr_token.name, curr_token.value, curr_token.line);
 }
 
@@ -159,7 +159,8 @@ bool isWord(){
         int f=strcmp(word,"CHARACTER");
         int g=strcmp(word,"DATE");
         int h=strcmp(word,"TIME");
-        if ( a==0|| b==0|| c == 0|| d==0 || e==0 || f==0 || g==0 || h==0 )
+        int p=strcmp(word,"VOID");
+        if ( a==0|| b==0|| c == 0|| d==0 || e==0 || f==0 || g==0 || h==0 || p==0)
         {
         curr_token.code = TYPE;
         strcpy(curr_token.name, "TYPE");

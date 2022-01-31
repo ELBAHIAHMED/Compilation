@@ -32,13 +32,15 @@ int main(int argc, char *argv[])
 
     //fprintf(xml_file,"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
     //fprintf(xml_file,"<note>\n");
-    //Program(); //Syntax Analysis : parsing
+    
+    Program(); //Syntax Analysis : parsing
     //fprintf(xml_file,"</note>\n");
 
     //fclose(xml_file);
 
     //printf("Program compiled\nOutput files: ./tokens.txt, ./syntax_tree.xml\n");
-    //printf("press ENTER to exit\n");
+    printf("Everything is Great \n");
+    printf("press ENTER to exit\n");
     //getchar();
     //exit(0);
 }

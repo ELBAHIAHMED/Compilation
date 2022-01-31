@@ -1,27 +1,27 @@
 # depslib dependency file v1.0
 1643237829 source:c:\users\el bahi\desktop\compilation\src\header.h.cpp
 
-1643328352 source:c:\users\el bahi\desktop\compilation\main.c
+1643581610 source:c:\users\el bahi\desktop\compilation\main.c
 	"dependencies.h"
 	"lex.c"
 	"Synta.c"
 
-1643323614 c:\users\el bahi\desktop\compilation\dependencies.h
+1643553546 c:\users\el bahi\desktop\compilation\dependencies.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 	<stdbool.h>
 
-1643326324 c:\users\el bahi\desktop\compilation\lex.c
+1643584463 c:\users\el bahi\desktop\compilation\lex.c
 	"dependencies.h"
 	"lex.h"
 
-1643323217 c:\users\el bahi\desktop\compilation\lex.h
+1643553534 c:\users\el bahi\desktop\compilation\lex.h
 
-1643330430 c:\users\el bahi\desktop\compilation\synta.c
+1643585231 c:\users\el bahi\desktop\compilation\synta.c
 	"dependencies.h"
 	"Synta.h"
 
-1643328318 c:\users\el bahi\desktop\compilation\synta.h
+1643578856 c:\users\el bahi\desktop\compilation\synta.h
 

@@ -4,7 +4,7 @@ beginprog
                float c,d;
  			   bit e<-0, f<-1;);
 
-	begin_func int moyenne(integer a, integer b )
+	beginfunc int moyenne(integer a, integer b )
 
 		c <- a+b/2;
 		return c;
