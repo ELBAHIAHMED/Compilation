@@ -1,158 +1,122 @@
-CODE: 0     BEGINPROG_TOKEN     VALUE: BEGINPROG      line: 1>
-CODE: 2     VAR_TOKEN     VALUE: VAR      line: 2>
-CODE: 52     OP_TOKEN     VALUE: (      line: 2>
-CODE: 21     INTEGER_TOKEN     VALUE: INTEGER      line: 2>
-CODE: 59     ID_TOKEN     VALUE: A      line: 2>
-CODE: 48     INFEQ_TOKEN     VALUE: <=      line: 2>
-CODE: 60     NUM_TOKEN     VALUE: 1      line: 2>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 2>
-CODE: 59     ID_TOKEN     VALUE: B      line: 2>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 2>
-CODE: 60     NUM_TOKEN     VALUE: 2      line: 2>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 2>
-CODE: 23     FLOAT_TOKEN     VALUE: FLOAT      line: 3>
-CODE: 59     ID_TOKEN     VALUE: C      line: 3>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 3>
-CODE: 59     ID_TOKEN     VALUE: D      line: 3>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 3>
-CODE: 59     ID_TOKEN     VALUE: BIT      line: 4>
-CODE: 59     ID_TOKEN     VALUE: E      line: 4>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 4>
-CODE: 60     NUM_TOKEN     VALUE: 0      line: 4>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 4>
-CODE: 59     ID_TOKEN     VALUE: F      line: 4>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 4>
-CODE: 60     NUM_TOKEN     VALUE: 1      line: 4>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 4>
-CODE: 53     CP_TOKEN     VALUE: )      line: 4>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 4>
-CODE: 59     ID_TOKEN     VALUE: BEGINFUNC      line: 6>
-CODE: 59     ID_TOKEN     VALUE: INT      line: 6>
-CODE: 59     ID_TOKEN     VALUE: MOYENNE      line: 6>
-CODE: 52     OP_TOKEN     VALUE: (      line: 6>
-CODE: 21     INTEGER_TOKEN     VALUE: INTEGER      line: 6>
-CODE: 59     ID_TOKEN     VALUE: A      line: 6>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 6>
-CODE: 21     INTEGER_TOKEN     VALUE: INTEGER      line: 6>
-CODE: 59     ID_TOKEN     VALUE: B      line: 6>
-CODE: 53     CP_TOKEN     VALUE: )      line: 6>
-CODE: 59     ID_TOKEN     VALUE: C      line: 8>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 8>
-CODE: 59     ID_TOKEN     VALUE: A      line: 8>
-CODE: 40     PLUS_TOKEN     VALUE: +      line: 8>
-CODE: 59     ID_TOKEN     VALUE: B      line: 8>
-CODE: 43     DIV_TOKEN     VALUE: /      line: 8>
-CODE: 60     NUM_TOKEN     VALUE: 2      line: 8>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 8>
-CODE: 5     RETURN_TOKEN     VALUE: RETURN      line: 9>
-CODE: 59     ID_TOKEN     VALUE: C      line: 9>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 9>
-CODE: 4     CLOSEFUNC_TOKEN     VALUE: CLOSEFUNC      line: 10>
-CODE: 59     ID_TOKEN     VALUE: MOYENNE      line: 10>
-CODE: 59     ID_TOKEN     VALUE: BEGINFUNC      line: 12>
-CODE: 36     VOID_TOKEN     VALUE: VOID      line: 12>
-CODE: 6     PRINCIPALFUNPRINCIPALFUNC_TOKEN     VALUE: PRINCIPALFUNC      line: 12>
-CODE: 52     OP_TOKEN     VALUE: (      line: 12>
-CODE: 53     CP_TOKEN     VALUE: )      line: 12>
-CODE: 59     ID_TOKEN     VALUE: D      line: 14>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 14>
-CODE: 59     ID_TOKEN     VALUE: MOYENNE      line: 14>
-CODE: 52     OP_TOKEN     VALUE: (      line: 14>
-CODE: 59     ID_TOKEN     VALUE: A      line: 14>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 14>
-CODE: 59     ID_TOKEN     VALUE: B      line: 14>
-CODE: 53     CP_TOKEN     VALUE: )      line: 14>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 14>
-CODE: 7     IF_TOKEN     VALUE: IF      line: 15>
-CODE: 59     ID_TOKEN     VALUE: D      line: 15>
-CODE: 50     SUPEQ_TOKEN     VALUE: >=      line: 15>
-CODE: 60     NUM_TOKEN     VALUE: 2      line: 15>
-CODE: 59     ID_TOKEN     VALUE: THEN      line: 15>
-CODE: 13     SHOW_TOKEN     VALUE: SHOW      line: 16>
-CODE: 52     OP_TOKEN     VALUE: (      line: 16>
-CODE: 59     ID_TOKEN     VALUE: D      line: 16>
-CODE: 53     CP_TOKEN     VALUE: )      line: 16>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 16>
-CODE: 59     ID_TOKEN     VALUE: ELSIF      line: 17>
-CODE: 59     ID_TOKEN     VALUE: D      line: 17>
-CODE: 47     INF_TOKEN     VALUE: <      line: 17>
-CODE: 60     NUM_TOKEN     VALUE: 2      line: 18>
-CODE: 59     ID_TOKEN     VALUE: THEN      line: 18>
-CODE: 13     SHOW_TOKEN     VALUE: SHOW      line: 19>
-CODE: 52     OP_TOKEN     VALUE: (      line: 19>
-CODE: 61     STRVAL_TOKEN     VALUE: 0      line: 19>
-CODE: 59     ID_TOKEN     VALUE: D      line: 19>
-CODE: 43     DIV_TOKEN     VALUE: /      line: 19>
-CODE: 60     NUM_TOKEN     VALUE: 2      line: 19>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 19>
-CODE: 59     ID_TOKEN     VALUE: Z      line: 19>
-CODE: 61     STRVAL_TOKEN     VALUE: 1      line: 19>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 19>
-CODE: 59     ID_TOKEN     VALUE: A      line: 19>
-CODE: 53     CP_TOKEN     VALUE: )      line: 19>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 19>
-CODE: 59     ID_TOKEN     VALUE: STOPIF      line: 20>
-CODE: 11     WHILE_TOKEN     VALUE: WHILE      line: 22>
-CODE: 59     ID_TOKEN     VALUE: C      line: 22>
-CODE: 47     INF_TOKEN     VALUE: <      line: 22>
-CODE: 60     NUM_TOKEN     VALUE: 10      line: 22>
-CODE: 59     ID_TOKEN     VALUE: THEN      line: 22>
-CODE: 13     SHOW_TOKEN     VALUE: SHOW      line: 22>
-CODE: 52     OP_TOKEN     VALUE: (      line: 22>
-CODE: 61     STRVAL_TOKEN     VALUE: 2      line: 22>
-CODE: 53     CP_TOKEN     VALUE: )      line: 22>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 22>
-CODE: 59     ID_TOKEN     VALUE: STOPWHILE      line: 23>
-CODE: 29     FOR_TOKEN     VALUE: FOR      line: 25>
-CODE: 52     OP_TOKEN     VALUE: (      line: 25>
-CODE: 59     ID_TOKEN     VALUE: A      line: 25>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 25>
-CODE: 60     NUM_TOKEN     VALUE: 3      line: 25>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 25>
-CODE: 59     ID_TOKEN     VALUE: A      line: 25>
-CODE: 47     INF_TOKEN     VALUE: <      line: 25>
-CODE: 60     NUM_TOKEN     VALUE: 40      line: 25>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 25>
-CODE: 59     ID_TOKEN     VALUE: A      line: 25>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 25>
-CODE: 59     ID_TOKEN     VALUE: A      line: 25>
-CODE: 40     PLUS_TOKEN     VALUE: +      line: 25>
-CODE: 60     NUM_TOKEN     VALUE: 1      line: 25>
-CODE: 53     CP_TOKEN     VALUE: )      line: 25>
-CODE: 13     SHOW_TOKEN     VALUE: SHOW      line: 26>
-CODE: 52     OP_TOKEN     VALUE: (      line: 26>
-CODE: 61     STRVAL_TOKEN     VALUE: 3      line: 26>
-CODE: 59     ID_TOKEN     VALUE: D      line: 26>
-CODE: 43     DIV_TOKEN     VALUE: /      line: 26>
-CODE: 60     NUM_TOKEN     VALUE: 2      line: 26>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 26>
-CODE: 59     ID_TOKEN     VALUE: Z      line: 26>
-CODE: 61     STRVAL_TOKEN     VALUE: 4      line: 26>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 26>
-CODE: 59     ID_TOKEN     VALUE: A      line: 26>
-CODE: 53     CP_TOKEN     VALUE: )      line: 26>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 26>
-CODE: 59     ID_TOKEN     VALUE: STOPFOR      line: 27>
-CODE: 59     ID_TOKEN     VALUE: G      line: 29>
-CODE: 46     ASSIGN_TOKEN     VALUE: <-      line: 29>
-CODE: 14     AND_TOKEN     VALUE: AND      line: 29>
-CODE: 52     OP_TOKEN     VALUE: (      line: 29>
-CODE: 59     ID_TOKEN     VALUE: E      line: 29>
-CODE: 44     COMMA_TOKEN     VALUE: ,      line: 29>
-CODE: 59     ID_TOKEN     VALUE: F      line: 29>
-CODE: 53     CP_TOKEN     VALUE: )      line: 29>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 29>
-CODE: 13     SHOW_TOKEN     VALUE: SHOW      line: 30>
-CODE: 52     OP_TOKEN     VALUE: (      line: 30>
-CODE: 59     ID_TOKEN     VALUE: G      line: 30>
-CODE: 53     CP_TOKEN     VALUE: )      line: 30>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 30>
-CODE: 13     SHOW_TOKEN     VALUE: SHOW      line: 31>
-CODE: 52     OP_TOKEN     VALUE: (      line: 31>
-CODE: 61     STRVAL_TOKEN     VALUE: 5      line: 31>
-CODE: 53     CP_TOKEN     VALUE: )      line: 31>
-CODE: 38     SC_TOKEN     VALUE: ;      line: 31>
-CODE: 4     CLOSEFUNC_TOKEN     VALUE: CLOSEFUNC      line: 33>
-CODE: 6     PRINCIPALFUNPRINCIPALFUNC_TOKEN     VALUE: PRINCIPALFUNC      line: 33>
-CODE: 1     CLOSEPROG_TOKEN     VALUE: CLOSEPROG      line: 36>
-CODE: 63     EOF_TOKEN     VALUE: EndOfFile      line: 36>
+CODE: 0     BEGINPROG_TOKEN     VALUE: BEGINPROG      n° line: 1 
+CODE: 2     VAR_TOKEN     VALUE: VAR      n° line: 2 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 2 
+CODE: 3     TYPE_TOKEN     VALUE: INTEGER      n° line: 2 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 2 
+CODE: 47     ASSIGN_TOKEN     VALUE: <-      n° line: 2 
+CODE: 61     NUM_TOKEN     VALUE: 1      n° line: 2 
+CODE: 45     COMMA_TOKEN     VALUE: ,      n° line: 2 
+CODE: 60     ID_TOKEN     VALUE: B      n° line: 2 
+CODE: 47     ASSIGN_TOKEN     VALUE: <-      n° line: 2 
+CODE: 61     NUM_TOKEN     VALUE: 2      n° line: 2 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 2 
+CODE: 3     TYPE_TOKEN     VALUE: INTEGER      n° line: 3 
+CODE: 60     ID_TOKEN     VALUE: C      n° line: 3 
+CODE: 45     COMMA_TOKEN     VALUE: ,      n° line: 3 
+CODE: 60     ID_TOKEN     VALUE: D      n° line: 3 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 3 
+CODE: 3     TYPE_TOKEN     VALUE: INTEGER      n° line: 4 
+CODE: 60     ID_TOKEN     VALUE: E      n° line: 4 
+CODE: 47     ASSIGN_TOKEN     VALUE: <-      n° line: 4 
+CODE: 61     NUM_TOKEN     VALUE: 0      n° line: 4 
+CODE: 45     COMMA_TOKEN     VALUE: ,      n° line: 4 
+CODE: 60     ID_TOKEN     VALUE: F      n° line: 4 
+CODE: 47     ASSIGN_TOKEN     VALUE: <-      n° line: 4 
+CODE: 61     NUM_TOKEN     VALUE: 1      n° line: 4 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 4 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 4 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 4 
+CODE: 4     BEGINFUNC_TOKEN     VALUE: BEGINFUNC      n° line: 6 
+CODE: 3     TYPE_TOKEN     VALUE: INTEGER      n° line: 6 
+CODE: 60     ID_TOKEN     VALUE: MOYENNE      n° line: 6 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 6 
+CODE: 3     TYPE_TOKEN     VALUE: INTEGER      n° line: 6 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 6 
+CODE: 45     COMMA_TOKEN     VALUE: ,      n° line: 6 
+CODE: 3     TYPE_TOKEN     VALUE: INTEGER      n° line: 6 
+CODE: 60     ID_TOKEN     VALUE: B      n° line: 6 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 6 
+CODE: 60     ID_TOKEN     VALUE: C      n° line: 8 
+CODE: 47     ASSIGN_TOKEN     VALUE: <-      n° line: 8 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 8 
+CODE: 41     PLUS_TOKEN     VALUE: +      n° line: 8 
+CODE: 60     ID_TOKEN     VALUE: B      n° line: 8 
+CODE: 44     DIV_TOKEN     VALUE: /      n° line: 8 
+CODE: 61     NUM_TOKEN     VALUE: 2      n° line: 8 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 8 
+CODE: 6     RETURN_TOKEN     VALUE: RETURN      n° line: 9 
+CODE: 60     ID_TOKEN     VALUE: C      n° line: 9 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 9 
+CODE: 5     CLOSEFUNC_TOKEN     VALUE: CLOSEFUNC      n° line: 11 
+CODE: 60     ID_TOKEN     VALUE: MOYENNE      n° line: 11 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 11 
+CODE: 4     BEGINFUNC_TOKEN     VALUE: BEGINFUNC      n° line: 13 
+CODE: 3     TYPE_TOKEN     VALUE: INTEGER      n° line: 13 
+CODE: 7     PRINCIPAL_TOKEN     VALUE: PRINCIPAL      n° line: 13 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 13 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 13 
+CODE: 8     IF_TOKEN     VALUE: IF      n° line: 14 
+CODE: 60     ID_TOKEN     VALUE: D      n° line: 14 
+CODE: 46     EQ_TOKEN     VALUE: ==      n° line: 14 
+CODE: 61     NUM_TOKEN     VALUE: 2      n° line: 14 
+CODE: 14     SHOW_TOKEN     VALUE: SHOW      n° line: 15 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 15 
+CODE: 60     ID_TOKEN     VALUE: D      n° line: 15 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 15 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 15 
+CODE: 10     ELIF_TOKEN     VALUE: ELIF      n° line: 16 
+CODE: 60     ID_TOKEN     VALUE: D      n° line: 16 
+CODE: 48     INF_TOKEN     VALUE: <      n° line: 16 
+CODE: 61     NUM_TOKEN     VALUE: 2      n° line: 17 
+CODE: 14     SHOW_TOKEN     VALUE: SHOW      n° line: 17 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 17 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 17 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 17 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 17 
+CODE: 9     CLOSEIF_TOKEN     VALUE: CLOSEIF      n° line: 18 
+CODE: 22     FOR_TOKEN     VALUE: FOR      n° line: 19 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 19 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 19 
+CODE: 47     ASSIGN_TOKEN     VALUE: <-      n° line: 19 
+CODE: 61     NUM_TOKEN     VALUE: 3      n° line: 19 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 19 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 19 
+CODE: 48     INF_TOKEN     VALUE: <      n° line: 19 
+CODE: 61     NUM_TOKEN     VALUE: 40      n° line: 19 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 19 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 19 
+CODE: 47     ASSIGN_TOKEN     VALUE: <-      n° line: 19 
+CODE: 60     ID_TOKEN     VALUE: A      n° line: 19 
+CODE: 41     PLUS_TOKEN     VALUE: +      n° line: 19 
+CODE: 61     NUM_TOKEN     VALUE: 1      n° line: 19 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 19 
+CODE: 14     SHOW_TOKEN     VALUE: SHOW      n° line: 20 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 20 
+CODE: 60     ID_TOKEN     VALUE: AHMED      n° line: 20 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 20 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 20 
+CODE: 14     SHOW_TOKEN     VALUE: SHOW      n° line: 21 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 21 
+CODE: 60     ID_TOKEN     VALUE: G      n° line: 21 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 21 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 21 
+CODE: 14     SHOW_TOKEN     VALUE: SHOW      n° line: 22 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 22 
+CODE: 60     ID_TOKEN     VALUE: AHMED      n° line: 22 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 22 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 22 
+CODE: 23     CLOSEFOR_TOKEN     VALUE: CLOSEFOR      n° line: 23 
+CODE: 12     WHILE_TOKEN     VALUE: WHILE      n° line: 24 
+CODE: 60     ID_TOKEN     VALUE: C      n° line: 24 
+CODE: 48     INF_TOKEN     VALUE: <      n° line: 24 
+CODE: 61     NUM_TOKEN     VALUE: 11      n° line: 24 
+CODE: 60     ID_TOKEN     VALUE: THEN      n° line: 24 
+CODE: 14     SHOW_TOKEN     VALUE: SHOW      n° line: 24 
+CODE: 53     OP_TOKEN     VALUE: (      n° line: 24 
+CODE: 60     ID_TOKEN     VALUE: TEST      n° line: 24 
+CODE: 54     CP_TOKEN     VALUE: )      n° line: 24 
+CODE: 39     SC_TOKEN     VALUE: ;      n° line: 24 
+CODE: 5     CLOSEFUNC_TOKEN     VALUE: CLOSEFUNC      n° line: 31 
+CODE: 7     PRINCIPAL_TOKEN     VALUE: PRINCIPAL      n° line: 31 
+CODE: 1     CLOSEPROG_TOKEN     VALUE: CLOSEPROG      n° line: 32 
+CODE: 64     EOF_TOKEN     VALUE: EndOfFile      n° line: 36 

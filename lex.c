@@ -160,12 +160,28 @@ bool isWord(){
         int g=strcmp(word,"DATE");
         int h=strcmp(word,"TIME");
         int p=strcmp(word,"VOID");
+        int k=strcmp(word,"FOR");
+        int x=strcmp(word,"CLOSEFOR");
         if ( a==0|| b==0|| c == 0|| d==0 || e==0 || f==0 || g==0 || h==0 || p==0)
         {
         curr_token.code = TYPE;
         strcpy(curr_token.name, "TYPE");
         strcpy(curr_token.value, word);
         }
+        else if (k==0)
+        {
+            curr_token.code = FOR;
+        strcpy(curr_token.name, "FOR");
+        strcpy(curr_token.value, word);
+        }
+        else if (x==0)
+        {
+            curr_token.code = CLOSEFOR;
+        strcpy(curr_token.name, "CLOSEFOR");
+        strcpy(curr_token.value, word);
+        }
+        
+        
         else{
         curr_token.code = j-1;
         strcpy(curr_token.name, keywords_list[j-1]);

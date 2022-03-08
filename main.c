@@ -39,8 +39,7 @@ int main(int argc, char *argv[])
     //fclose(xml_file);
 
     //printf("Program compiled\nOutput files: ./tokens.txt, ./syntax_tree.xml\n");
-    printf("Everything is Great \n");
-    printf("press ENTER to exit\n");
+
     //getchar();
     //exit(0);
 }

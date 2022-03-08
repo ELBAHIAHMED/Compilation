@@ -5,9 +5,9 @@
 void Erreur(token_code COD_ERR,int i){
     switch(COD_ERR){
         
-  case 0: printf("%d-ligne %s ERREUR-->BEGINPROG_ERREUR\n",i,curr_token.value) ;break;
-  case 60: printf("%d-ligne %s ERREUR-->ID_ERREUR\n",i,curr_token.value);break;
-  case 2: printf("%d-ligne %s ERREUR-->VAR_ERREUR\n",i,curr_token.value);break;
+  case 0: printf("%d-ligne ERREUR-->BEGINPROG_ERREUR\n",i,curr_token.value) ;break;
+  case 60: printf("%d-ligne ERREUR-->ID_ERREUR\n",i,curr_token.value);break;
+  case 2: printf("%d-ligne  ERREUR-->VAR_ERREUR\n",i,curr_token.value);break;
   case 4: printf("%d-ligne %s ERREUR-->BEGINFUNC_ERREUR\n",i,curr_token.value);break; 
   case 1: printf("%d-ligne %s ERREUR-->CLOSEPROG_ERREUR\n",i,curr_token.value);break; 
   case 5: printf("%d-ligne %s ERREUR-->CLOSEFUNC_ERREUR\n",i,curr_token.value);break;
@@ -18,7 +18,7 @@ void Erreur(token_code COD_ERR,int i){
   case 12 : printf("%d-ligne %s ERREUR-->WHILE_ERREUR\n",i,curr_token.value);break;
   case 13: printf("%d-ligne %s ERREUR-->READ_ERREUR\n",i,curr_token.value);break; 
   case 14: printf("%d-ligne %s ERREUR-->SHOW_ERREUR\n",i,curr_token.value);break;
-  case 39: printf("%d-ligne %s ERREUR-->SC_ERREUR\n",i,curr_token.value);break; 
+  case 39: printf("%d-ligne  ERREUR-->SC_ERREUR\n",i);break; 
   case 41: printf("%d-ligne %s ERREUR-->PLUS_ERREUR\n",i,curr_token.value);break;
   case 42: printf("%d-ligne %s ERREUR-->MOINS_ERREUR\n",i,curr_token.value);break;
   case 43: printf("%d-ligne %s ERREUR-->MULT_ERREUR\n",i,curr_token.value);break;
@@ -101,8 +101,8 @@ void Program(){
     //fprintf(xml_file,"<PROGRAM>\n");
       verifyTokenbeging(BEGINPROG);
         VARS();
-      //START();
-      //verifyToken(CLOSEPROG);
+      START();
+      verifyToken(CLOSEPROG);
   }
 
 
@@ -213,22 +213,25 @@ void Program(){
                                                                   }
                                                             }
                                                  verifyToken(CP);
-                                                 
+                                                
                                                  INSTS();
+                                                  
                                                  verifyToken(CLOSEFUNC);
                                                  
                                                  verifyToken(ID);
-                                                 verifyToken(SC);
-                           case PRINCIPALFUNC    : verifyToken(PRINCIPALFUNC);
+                                                 verifyToken(SC);break;
+
+                           case PRINCIPAL  :   
+                                                verifyToken(PRINCIPAL); 
                                                  verifyToken(OP);
                                                  verifyToken(CP);
                                                 
                                                  INSTS();
                                                  verifyToken(CLOSEFUNC);
-                                                 verifyToken(PRINCIPALFUNC);break;
+                                                 verifyToken(PRINCIPAL);break;
                            default             : Erreur(BEGINFUNC,curr_token.line);break; // printf();
                          }
-       default : printf("----FUNCTION ----");break; // errreur (curr_toke.code) id ahmed id
+       //default : printf("----FUNCTION ----");break; // errreur (curr_toke.code) id ahmed id
      }
     
   }
@@ -238,33 +241,40 @@ void Program(){
 /* verification des instruction */
   void INSTS() {
     INST();
-    while (curr_token.code!=EndOfFile)
+    while (curr_token.code!=CLOSEFUNC && curr_token.code!=CLOSEFOR)
     INST();
 }
 /* verification des BEGIN, WHILE, WRITE, READ .....*/
   void INST() {
     
     switch (curr_token.code) {
-      case BEGINFUNC :verifyToken(BEGINFUNC);FUNCTION();verifyToken(SC); verifyToken(CLOSEFUNC);
+        
+      case BEGINFUNC :verifyToken(BEGINFUNC);verifyToken(TYPE);FUNCTION();verifyToken(SC); verifyToken(CLOSEFUNC);
                             break;
       //case SWITCH_TOKEN : SWITCH();break;
-      case FOR    : For(); break;
+      case FOR    : For() ; break;
       case ID     : verifyToken(ID);
                           if (curr_token.code==SC) verifyToken(SC);
                           else  AFFEC();
-                          next_token(); // verifier affec
+                          //next_token(); // verifier affec
                           break;
       case IF   : SI(); break;
-      case WHILE : TANTQUE();break;
-      case SHOW : ECRIRE();verifyToken(SC);
-                         break;
+      case WHILE : TANTQUE() ;break;
+      case SHOW :  ECRIRE();verifyToken(SC);  break;
       case READ  : LIRE();verifyToken(SC); break;
       case RETURN: verifyToken(RETURN);
+                        
                          EXPR();
                          verifyToken(SC);
                          break;
+      /*case CLOSEFUNC :  verifyToken(CLOSEFUNC);
+                        verifyToken(ID);
+                        
+                        verifyToken(SC); break;   */
+        case CLOSEFOR : break;                     
       
-      default          : next_token();break;
+      default          : next_token();
+                            break;
   }
   }
 /* verification des AFFEC_TOKEN (affectation) */
@@ -316,6 +326,7 @@ void Program(){
   }
 /* verification FOR */
 void For(){
+    
   verifyToken(FOR);
   verifyToken(OP);
   verifyToken(ID);
@@ -328,9 +339,10 @@ void For(){
   verifyToken(ASSIGN);
   EXPR();
   verifyToken(CP);
-  INSTS();
-  verifyToken(CLOSEFOR);
   
+  INSTS();
+verifyToken(CLOSEFOR);
+
 }
 /* verification SWITCH */
 /*void SWITCH(){
@@ -374,16 +386,17 @@ void For(){
 
     verifyToken(IF);
     COND();// next token
-    next_token();
+    //next_token();
     INST();
     CHOICE();
     verifyToken(CLOSEIF);
   }
   void CHOICE(){
     switch (curr_token.code) {
-                    case ELIF: verifyToken(ELIF);
+                    case ELIF: 
+                    verifyToken(ELIF);
                                       COND(); // next token 
-                                      next_token();
+                                      //next_token();
                                       
                                       INST();break;
                     case ELSE: verifyToken(ELSE);
@@ -434,7 +447,7 @@ void For(){
       Test_Symbole(PF_TOKEN,PF_ERR);*/
         EXPR();
         verifyToken(CP);
-        verifyToken(SC);
+        
 
     }
 /* verification de ce qui est après le  PUT_in */

@@ -1,0 +1,35 @@
+beginprog
+var(integer a<-1 , b<-2 ;
+               integer c,d;
+ 		integer e<-0, f<-1;);
+
+	beginfunc integer moyenne(integer a , integer b )
+
+		c <- a+b/2;
+		return c;
+
+	closeFunc moyenne;
+
+	beginfunc integer principal()
+		if d==2 
+			show (d);
+			elif d<2
+			show(a);
+		closeif
+		for ( a<-3; a < 40; a<- a+1) 
+		show(ahmed);
+		show(g);
+		show(ahmed);
+		CLOSEFOR
+		while c<11 then show(test);
+		
+
+		
+		
+		
+
+	closeFunc principal
+closeprog
+
+
+
